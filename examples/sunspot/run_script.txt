@@ -1,0 +1,3 @@
+python3 tsf.py -a compile -o mse -m examples/sunspot/models/model_23_11_11 -rl 2 -dl 3 -ir 0.015 -dr 0.2 -bn -w 11 -f 1 -p 1 -v
+
+python3 tsf.py -a train -ds examples/sunspot/datasets/training_dataset.csv -m examples/sunspot/models/model_23_11_11.h5 -vs 0.1 -w 11 -f 1 -p 1 -ep 100 -b 128 -ilr 0.002 -v
