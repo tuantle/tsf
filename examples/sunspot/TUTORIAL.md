@@ -3,7 +3,7 @@
 
 In this tutorial, we learn how to use [tsf](https://github.com/tuantle/tsf) tool to forecast monthly sunspot occurrences. This tutorial focuses on single variable regression modeling that will be trained using the [Zuerich monthly sunspots numbers dataset.](https://datamarket.com/data/set/22ti/zuerich-monthly-sunspot-numbers-1749-1983#!ds=22ti&display=line).
 
-##### Raw Dataset Processing
+### Raw Dataset Processing
 
 Before we build the model and start the training, the raw CSV dataset must be processed. We need to remove all NA or missing data points and to transform or remove non-numerical data points. Next, rearrange the columns so that the first column is the Index (this column will be ignored), the next set of columns are the features, and finally the predictions column. The feature and prediction column labels can be anything.
 
@@ -35,7 +35,7 @@ To help make this dataset easier to train, a 12 months average window is applied
 
 ![Image](plots/dataset.png "dataset")
 
-##### Setup & Training Strategy
+### Setup & Training Strategy
 
 This is a single variable regression modeling tutorial so we will only have 1 input feature to feed into our model and 1 prediction output from the model.
 
@@ -67,7 +67,7 @@ Here we feed in feature data in rows 1 to 11, column 1 and expect the model to p
 | 11 | 92.2           | ...
 | 12 | ...            | 84.2
 
-##### Setup Model
+### Setup Model
 
 Since this is a single variable dataset that is somewhat periodic and regular, a simple DNN with 2 LSMT and 3 Dense or fully connected layers should be adequate. And to improve training and reduce overfitting, we will set dropout rate at 20%, input regularization (*L1L2 regularization at input layer*) at 0.015 and enable batch normalization for input and hidden layers.
 
@@ -151,7 +151,7 @@ Non-trainable params: 208
 _________________________________________________________________
 ```
 
-##### Train Model
+### Train Model
 
 For training, we are going to split the dataset into 2 parts, 10% will be for validation and 90% for training.
 
@@ -185,7 +185,7 @@ Here is the training & validation loss after 100 epochs.
 
 ![Image](plots/training_loss.png "training loss")
 
-##### Results
+### Results
 
 Here is the output results from excecuting ```tsf.py -a train...``` of the validation dataset. The expected and predicted sunspot number are plot on top of each other. The prediction results is decent with a relatively simple model and can be further improved with hyper parameters tuning.
 
