@@ -23,7 +23,7 @@ After processing and cleaning up, the dataset should looks like so.
 | 2 | -15  | -4   | 1020 | 2.68       | 0    | 0    | 148  | 148  |
 | 3 | -11  | -5   | 1021 | 3.57       | 0    | 0    | 159  | 159  |
 
-And the plot of the processed [dataset]()
+And the plot of the processed [dataset](https://github.com/tuantle/tsf/blob/master/examples/air_quality/datasets/training_dataset.csv)
 
 ![Image](plots/dataset.png "dataset")
 
