@@ -28,7 +28,7 @@ And the plot of the processed [dataset](https://github.com/tuantle/tsf/blob/mast
 
 ### Setup & Training Strategy
 
-Just like the previous tutorials, the training strategy is to look back at the previous 5 minutes of feature data and and make forecast for room occupancy in the next minute.
+Just like the previous tutorials, the training strategy is to look back at the previous 5 minutes of feature data and make forecast for room occupancy in the next minute.
 
 Thus the input of the model would be a tensor of shape = (N, 5, 4), where N = batch size, 5 = past 5 minutes window, and 4 = feature count.
 
@@ -138,7 +138,7 @@ Validation dataset.
 
 ![Image](plots/validation_dataset.png "validation dataset")
 
-We will train the model for 50 epoch with batch size = 128 and initial learning rate at 0.001. Learning rate step decay annealing is automatically apply by [tsf](https://github.com/tuantle/tsf) during training.
+We will train the model for 50 epochs with batch size = 128 and initial learning rate at 0.001. Learning rate step decay annealing is automatically apply by [tsf](https://github.com/tuantle/tsf) during training.
 
 Start the training with the command below.
 
@@ -164,6 +164,6 @@ Here is the training & validation loss and accuracy after 100 epochs.
 
 ### Results
 
-Here is the output results from excecuting ```tsf.py -a train...``` of the validation dataset. The expected and predicted occupancies are plot on top of each other. The prediction results is decent for long durations but not so well for short durations where the room is occupied for a very short amount of time. Cleaning up **LIGHT** data points would help improve prediction accuracy and maybe also fixing mispredictions (just before sample = 3000 mark in the plot below).
+Here is the output results from executing ```tsf.py -a train...``` of the validation dataset. The expected and predicted occupancies are plot on top of each other. The prediction results is decent for long durations but not so well for short durations where the room is occupied for a very short amount of time. Cleaning up **LIGHT** data points would help improve prediction accuracy and maybe also fixing mispredictions (just before sample = 3000 mark in the plot below).
 
 ![Image](plots/prediction_results_z.png "prediction results")
