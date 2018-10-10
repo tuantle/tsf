@@ -15,7 +15,7 @@ Here are the first few rows of the raw dataset. Just like the previous tutorial,
 
 We will have to remove the **year**, **month**, and **day** columns as they are not needed. **cbwd** is the wind direction and **Iws** is wind speed. We only need the wind speed so wind direction column will be removed.
 **Is** is snow data and **Ir** is rain and **pm2.5** is what we are going to forecast so it will be moved to the last column. The original dataset has more than 2 years of dataset. We will only use 1 year of data for this tutorial.
-After processing and cleaning up, the dataset should looks like so.
+After processing and cleaning up, the dataset should look like so.
 
 | N | DEWP | TEMP | PRES | WIND_SPEED | SNOW | RAIN | PM25 | PM25 |
 |---|------|------|------|------------|------|------|------|------|
@@ -41,7 +41,7 @@ Below is a visual diagram of the feature-prediction sliding windows during train
 
 ![Image](plots/windows.png "sliding windows")
 
-And an example of the data points inside feature-prediction sliding windows. This assume batch size = 1.
+And an example of the data points inside feature-prediction sliding windows. This assumes batch size = 1.
 Here we feed in feature data in rows 1 to 2, columns 1 to 7 and expect the model to predict **PM25** in row 3, column 8.
 
 | N | DEWP      | TEMP     | PRES       | WIND_SPEED | SNOW    | RAIN    | PM25      | PM25      |
@@ -181,7 +181,7 @@ Here is the validation dataset for year 2.
 
 ![Image](plots/validation_dataset.png "validation dataset")
 
-We will train the model for 150 epoch with batch size = 1024 and initial learning rate at 0.005. Learning rate step decay annealing is automatically apply by [tsf](https://github.com/tuantle/tsf) during training. Start the training with the command below.
+We will train the model for 150 epochs with batch size = 1024 and initial learning rate at 0.005. Learning rate step decay annealing is automatically apply by [tsf](https://github.com/tuantle/tsf) during training. Start the training with the command below.
 
 ```
 python3 tsf.py -a train -ds examples/air_quality/datasets/training_dataset.csv -m examples/air_quality/models/model_33_2_71.h5 -vs 0.5 -w 2 -f 7 -p 1 -ep 150 -b 1024 -ilr 0.005 -v
@@ -209,7 +209,7 @@ Here is the training & validation loss after 100 epochs.
 
 ### Results
 
-Here is the model output results for the validation dataset. The expected and predicted **PM25** level are plot on top of each other. This might looks like a case of overfitting since the prediction is very well matched with the expectation, but this is not the dataset that the model was trained with. This is the validation dataset, so the model is doing a decent job at making predictions for next hour pollution level.
+Here is the model output result for the validation dataset. The expected and predicted **PM25** level are plot on top of each other. This might looks like a case of overfitting since the prediction is very well matched with the expectation, but this is not the dataset that the model was trained with. This is the validation dataset, so the model is doing a decent job at making predictions for next hour pollution level.
 
 ![Image](plots/prediction_results_z.png "prediction results")
 
