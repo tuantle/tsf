@@ -3,7 +3,7 @@
 
 This tutorial focuses on multi-variable classification modeling and we learn how to predict room occupancy with [tsf](https://github.com/tuantle/tsf) tool. We will be using [room occupancy detection dataset](https://archive.ics.uci.edu/ml/datasets/Occupancy+Detection+) for training and testing.
 
-##### Raw Dataset Processing
+### Raw Dataset Processing
 
 Room occupancy detection dataset contains information such as temperature, humidity, CO2 level, and light level.
 Here are the first few rows of the raw dataset. Just like the previous tutorial, we need to clean up the raw CSV dataset and rearrange the columns.
@@ -26,7 +26,7 @@ And the plot of the processed [dataset]()
 
 ![Image](plots/dataset.png "dataset")
 
-##### Setup & Training Strategy
+### Setup & Training Strategy
 
 Just like the previous tutorials, the training strategy is to look back at the previous 5 minutes of feature data and and make forecast for room occupancy in the next minute.
 
@@ -50,7 +50,7 @@ Here we feed in feature data in rows 1 to 5, columns 1 to 4 and expect the model
 | 5 | 22   | 31       | 437   | 1006    | ...       |
 | 6 | ...  | ...      | ...   | ...     | 1         |
 
-##### Setup Model
+### Setup Model
 
 For this classification forcasting, we will build a model with 3 LSMT and 3 Dense or fully connected layers. And to improve training, we will set dropout rate at 20%, input regularization (*L1L2 regularization at input layer*) at 0.01 and enable batch normalization for input and hidden layers.
 
@@ -126,7 +126,7 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
-##### Train Model
+### Train Model
 
 For training, we are going to split the dataset into 2 parts, 40% will be for validation and 60% for training.
 
@@ -162,7 +162,7 @@ Here is the training & validation loss and accuracy after 100 epochs.
 
 ![Image](plots/training_loss_acc.png "training loss & accuracy")
 
-##### Results
+### Results
 
 Here is the output results from excecuting ```tsf.py -a train...``` of the validation dataset. The expected and predicted occupancies are plot on top of each other. The prediction results is decent for long durations but not so well for short durations where the room is occupied for a very short amount of time. Cleaning up **LIGHT** data points would help improve prediction accuracy and maybe also fixing mispredictions (just before sample = 3000 mark in the plot below).
 
