@@ -79,7 +79,7 @@ python tsf.py
 ```
 Param (short) | Param (full)                     | Default | Required | Description
 --------------|----------------------------------|---------|----------|------------
--a            | --action                         | None    | Yes      | 3 possible action types: compile or train
+-a            | --action                         | None    | Yes      | 2 possible action types: compile or train
 -m            | --model                          | None    | Yes      | Model filename
 -o            | --objective                      | None    | Yes      | Learning objective. For regression, possible values are: mse, mae, lcl. For classification, possible values are: bce, cce
 -opt          | --optimizer                      | adam    | No       | Optimization method, possible values are: sgd, rmsprop, adagrad, adadelta, adam, adamax. Default is adam
