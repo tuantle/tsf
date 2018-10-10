@@ -193,4 +193,4 @@ Here is the output results from excecuting ```tsf.py -a train...``` of the valid
 
 ----
 
-[Next Tutorial - Forecasting Air Quality (*Multi-Variable Regression With Auto Features Extraction*)](https://github.com/tuantle/tsf/tree/master/examples/air_quality/tutorial.md)
+[Next Tutorial - Forecasting Air Quality (*Multi-Variable Regression With Auto Features Extraction*)](https://github.com/tuantle/tsf/blob/master/examples/air_quality/TUTORIAL.md)
