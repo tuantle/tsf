@@ -215,4 +215,4 @@ Here is the model output results for the validation dataset. The expected and pr
 
 ----
 
-[Next Tutorial - Forecasting Room Occupancy (*Multi-Variable Classification*)](https://github.com/tuantle/tsf/tree/master/examples/occupancy/tutorial.md)
+[Next Tutorial - Forecasting Room Occupancy (*Multi-Variable Classification*)](https://github.com/tuantle/tsf/blob/master/examples/occupancy/TUTORIAL.md)
