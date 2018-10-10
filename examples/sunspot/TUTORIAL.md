@@ -31,7 +31,7 @@ Since we have a single variable dataset of sunspot counts over time, the process
 | 3 | 83.3           | 83.3           |
 | 4 | 84.9           | 84.9           |
 
-To help make this dataset easier to train, a 12 months average window is applied to each data point. So each datapoint is an average of the previous 12 months. This smooth out the fluctuations and reduce the complexity in the dataset. And the plot of the processed [dataset](https://github.com/tuantle/tsf/blob/master/examples/sunspot/datasets/training_dataset.csv)
+To help make this dataset easier to train, a 12 months average window is applied to each data point. So each data point is an average of the previous 12 months. This smooth out the fluctuations and reduce the complexity in the dataset. And the plot of the processed [dataset](https://github.com/tuantle/tsf/blob/master/examples/sunspot/datasets/training_dataset.csv)
 
 ![Image](plots/dataset.png "dataset")
 
@@ -39,7 +39,7 @@ To help make this dataset easier to train, a 12 months average window is applied
 
 This is a single variable regression modeling tutorial so we will only have 1 input feature to feed into our model and 1 prediction output from the model.
 
-The training strategy is to let the model see the last 11 months of sunspot number data and and have it makes forecast for next month sunspot number.
+The training strategy is to let the model see the last 11 months of sunspot number data and have it makes forecast for next month sunspot number.
 
 Thus the input of the model would be a tensor of shape = (N, 11, 1), where N = batch size, 11 = past 11 months window, and 1 = feature count.
 
@@ -163,7 +163,7 @@ Validation dataset.
 
 ![Image](plots/validation_dataset.png "validation dataset")
 
-We will train the model for 100 epoch with batch size = 128 and initial learning rate at 0.002. Learning rate step decay annealing is automatically apply by [tsf](https://github.com/tuantle/tsf) during training. Start the training with the command below.
+We will train the model for 100 epochs with batch size = 128 and initial learning rate at 0.002. Learning rate step decay annealing is automatically apply by [tsf](https://github.com/tuantle/tsf) during training. Start the training with the command below.
 
 ```
 python3 tsf.py -a train -ds examples/sunspot/datasets/training_dataset.csv -m examples/sunspot/models/model_23_11_11.h5 -vs 0.5 -w 11 -f 1 -p 1 -ep 100 -b 128 -ilr 0.002 -v
@@ -187,7 +187,7 @@ Here is the training & validation loss after 100 epochs.
 
 ### Results
 
-Here is the output results from excecuting ```tsf.py -a train...``` of the validation dataset. The expected and predicted sunspot number are plot on top of each other. The prediction results is decent with a relatively simple model and can be further improved with hyper parameters tuning.
+Here is the output result from executing ```tsf.py -a train...``` of the validation dataset. The expected and predicted sunspot number are plot on top of each other. The prediction results is decent with a relatively simple model and can be further improved with hyper parameters tuning.
 
 ![Image](plots/prediction_results.png "prediction results")
 
