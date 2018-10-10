@@ -3,7 +3,7 @@
 
 In this tutorial, we learn how to use [tsf](https://github.com/tuantle/tsf) tool to forecast hourly air pollution. This tutorial focuses on multi-variable regression modeling that will be trained using the [Beijing air quality dataset.](https://archive.ics.uci.edu/ml/datasets/Beijing+PM2.5+Data).
 
-##### Raw Dataset Processing
+### Raw Dataset Processing
 
 Here are the first few rows of the raw dataset. Just like the previous tutorial, we need to clean up the raw CSV dataset and rearrange the columns.
 
@@ -27,7 +27,7 @@ And the plot of the processed [dataset]()
 
 ![Image](plots/dataset.png "dataset")
 
-##### Setup & Training Strategy
+### Setup & Training Strategy
 
 This is a multi-variable regression modeling tutorial with 7 input features to feed into our model and 1 prediction output from the model.
 
@@ -50,7 +50,7 @@ Here we feed in feature data in rows 1 to 2, columns 1 to 7 and expect the model
 | 2 |    -15    |    -4    |    1020    |    2.68    |    0    |    0    |    148    | ...       |
 | 3 | ...       | ...      | ...        | ...        | ...     | ...     | ...       |    159    |
 
-##### Setup Model
+### Setup Model
 
 For this multi-variable classification tutorial, we will use a different strategy for modeling and training. [tsf](https://github.com/tuantle/tsf) has an auto features extraction capability that we can use to improve model training and possibly improve the model forecasting performance. What the auto features extraction does is compressing the original features of our dataset and extract the meaningful compressed representations. A simple recurrent auto-encoder will be used for this task. We will then concatenate the original features and the extracted features together and feed that into our main model. [tsf](https://github.com/tuantle/tsf) will handle all this processes internally.
 
@@ -168,7 +168,7 @@ Non-trainable params: 410
 _________________________________________________________________
 ```
 
-##### Train Model
+### Train Model
 
 For training, we are going to split the dataset into 2 parts. Because we have 2 years worth of data, 50% will be for validation (year 2) and 50% for training (year 1). So in other words, using year 1 dataset for training the model and then using the trained model to predict pollution levels of year 2.
 The auto features extraction model, on the other hand, are being train with the entire dataset (2 years). This is done first before training the main model.
@@ -207,7 +207,7 @@ Here is the training & validation loss after 100 epochs.
 
 ![Image](plots/training_loss.png "training loss")
 
-##### Results
+### Results
 
 Here is the model output results for the validation dataset. The expected and predicted **PM25** level are plot on top of each other. This might looks like a case of overfitting since the prediction is very well matched with the expectation, but this is not the dataset that the model was trained with. This is the validation dataset, so the model is doing a decent job at making predictions for next hour pollution level.
 
