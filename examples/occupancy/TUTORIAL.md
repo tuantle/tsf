@@ -22,7 +22,7 @@ We do not need **date** data so that column will be removed. We also don't need 
 | 2 | 24   | 26       | 578   | 760     | 1         |
 | 3 | 24   | 26       | 573   | 770     | 1         |
 
-And the plot of the processed [dataset]()
+And the plot of the processed [dataset](https://github.com/tuantle/tsf/blob/master/examples/occupancy/datasets/training_dataset.csv)
 
 ![Image](plots/dataset.png "dataset")
 
