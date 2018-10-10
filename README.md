@@ -8,7 +8,7 @@ TSF (time series forecast) is a simple set of python scripts for compiling and t
 This was built with the idea of simplifying model compiling and training processes with no need to write any code. The processes are reduced down to dataset preparation in csv format, runs [tsf](https://github.com/tuantle/tsf) command script to compile and training model, and save trained model as HDF5 format.
 
 Some Notable Features:
-- Takes time series datatset in simple CSV format
+- Takes time series dataset in simple CSV format
 - Adjustable window size - how far to look into the past data points to make prediction for the next future data point
 - Auto features extraction
 - Build recurrence neural network models with a few command options
@@ -25,7 +25,7 @@ Some Notable Features:
 
 ### Installation
 
-If using OSX, first install python3 with homebrew. Go here if you dont have homebrew installed(https://brew.sh).
+If using OSX, first install python3 with homebrew. Go here if you don't have homebrew installed(https://brew.sh).
 
 ```
 brew install python3
