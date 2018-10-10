@@ -67,9 +67,9 @@ That’s it!
 ### Tutorials
 To understand how to use [tsf](https://github.com/tuantle/tsf) tool to build models for time series classification or regression forecasting, please check out the tutorials in the links below.
 
-+ [Tutorial 1 - Forecasting Sunspot Monthly Occurrence (*Single Variable Regression*)](https://github.com/tuantle/tsf/tree/master/examples/sunspot/tutorial.md)
-+ [Tutorial 2 - Forecasting Air Quality (*Multi-Variable Regression With Auto Features Extraction*)](https://github.com/tuantle/tsf/tree/master/examples/air_quality/tutorial.md)
-+ [Tutorial 3 - Forecasting Room Occupancy (*Multi-Variable Classification*)](https://github.com/tuantle/tsf/tree/master/examples/occupancy/tutorial.md)
++ [Tutorial 1 - Forecasting Sunspot Monthly Occurrence (*Single Variable Regression*)](https://github.com/tuantle/tsf/blob/master/examples/sunspot/TUTORIAL.md)
++ [Tutorial 2 - Forecasting Air Quality (*Multi-Variable Regression With Auto Features Extraction*)](https://github.com/tuantle/tsf/blob/master/examples/air_quality/TUTORIAL.md)
++ [Tutorial 3 - Forecasting Room Occupancy (*Multi-Variable Classification*)](https://github.com/tuantle/tsf/blob/master/examples/occupancy/TUTORIAL.md)
 
 ----
 
