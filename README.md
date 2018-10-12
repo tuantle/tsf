@@ -73,6 +73,17 @@ To understand how to use [tsf](https://github.com/tuantle/tsf) tool to build mod
 
 ----
 
+### Dataset Format
+
+TSF takes dataset in CSV format. All NA or non-numerical data points must be transformed or removed. Next, rearrange the columns so that the first column is the Index (this column will be ignored), the next set of columns are the features, and second set of columns are the predictions. The feature and prediction column labels can be anything.
+Use required command options ***--feature_size*** and ***--prediction_size*** to tell the script which set is which.
+
+| N   | Feature1 | Feature2 | ... | FeatureN | Prediction1 | Prediction2 | ... | PredictionN |
+|-----|----------|----------|-----|----------|-------------|-------------|-----|-------------|
+| 1   |          |          |     |          |             |             |     |             |
+| 2   |          |          |     |          |             |             |     |             |
+| 3   |          |          |     |          |             |             |     |             |
+
 ### Command Options
 ```
 python tsf.py
