@@ -19,7 +19,8 @@ Some Notable Features:
 
 - [Installation](#installation)
 - [Tutorials](#tutorials)
-- [Command Options](#command-options)
+- [Dataset Format](#command-options)
+- [Command Options](#dataset-format)
 - [Change Log](#change-log)
 - [License](#license)
 
