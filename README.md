@@ -1,4 +1,4 @@
-# [tsf](https://github.com/tuantle/tsf)
+# [TSF](https://github.com/tuantle/tsf)
 #### Neural network model creation and training for time series forecast/prediction with Keras + Tensorflow backend.
 
 ![Image](assets/windows.png "sliding windows")
@@ -14,6 +14,8 @@ Some Notable Features:
 - Build recurrence neural network models with a few command options
 - Auto compile model for training
 - Save trained model as HDF5 binary format
+
+Disclaimer: Forecasting or making future prediction using recurrent neural network only work well with bounded and periodic or oscillating time series, and fail spectacularly with unbounded and chaotic time series. So dont use this to make stock price prediction. :) 
 
 ----
 
