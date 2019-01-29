@@ -10,7 +10,7 @@ This was built with the idea of simplifying model compiling and training process
 Some Notable Features:
 - Takes time series dataset in simple CSV format
 - Adjustable window size - how far to look into the past data points to make prediction for the next future data point
-- Auto features extraction (simple autoencoder - next version will use contractive vae)
+- Auto features extraction (simple autoencoder - next version will use contractive autoencoder)
 - Build recurrence neural network models with a few command options
 - Auto compile model for training
 - Save trained model as HDF5 binary format
