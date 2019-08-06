@@ -1,4 +1,4 @@
-# [TSF (Timeseries Forecast)](https://github.com/tuantle/tsf)
+# [TSF (Time Series Forecast)](https://github.com/tuantle/tsf)
 #### Neural network model creation and training for time series forecast/prediction with Keras + Tensorflow backend.
 
 ![Image](assets/windows.png "sliding windows")
